@@ -65,7 +65,7 @@ namespace AspNet.Identity.MySQL {
         user.PhoneNumberConfirmed = ParseForBool(row["PhoneNumberConfirmed"]);
         user.LockoutEnabled = ParseForBool(row["LockoutEnabled"]);
         user.TwoFactorEnabled = ParseForBool(row["TwoFactorEnabled"]);
-        user.LockoutEndDateUtc = string.IsNullOrEmpty(row["LockoutEndDateUtc"]) ? DateTime.Now : DateTime.Parse(row["LockoutEndDateUtc"]);
+        user.LockoutEndDateUtc = string.IsNullOrEmpty(row["LockoutEndDateUtc"]) ? DateTime.UtcNow : DateTime.Parse(row["LockoutEndDateUtc"]);
         user.AccessFailedCount = string.IsNullOrEmpty(row["AccessFailedCount"]) ? 0 : int.Parse(row["AccessFailedCount"]);
       }
 
@@ -98,7 +98,7 @@ namespace AspNet.Identity.MySQL {
         user.PhoneNumberConfirmed = ParseForBool(row["PhoneNumberConfirmed"]);
         user.LockoutEnabled = ParseForBool(row["LockoutEnabled"]);
         user.TwoFactorEnabled = ParseForBool(row["TwoFactorEnabled"]);
-        user.LockoutEndDateUtc = string.IsNullOrEmpty(row["LockoutEndDateUtc"]) ? DateTime.Now : DateTime.Parse(row["LockoutEndDateUtc"]);
+        user.LockoutEndDateUtc = string.IsNullOrEmpty(row["LockoutEndDateUtc"]) ? DateTime.UtcNow : DateTime.Parse(row["LockoutEndDateUtc"]);
         user.AccessFailedCount = string.IsNullOrEmpty(row["AccessFailedCount"]) ? 0 : int.Parse(row["AccessFailedCount"]);
         users.Add(user);
       }
@@ -130,7 +130,7 @@ namespace AspNet.Identity.MySQL {
         user.PhoneNumberConfirmed = ParseForBool(row["PhoneNumberConfirmed"]);
         user.LockoutEnabled = ParseForBool(row["LockoutEnabled"]);
         user.TwoFactorEnabled = ParseForBool(row["TwoFactorEnabled"]);
-        user.LockoutEndDateUtc = string.IsNullOrEmpty(row["LockoutEndDateUtc"]) ? DateTime.Now : DateTime.Parse(row["LockoutEndDateUtc"]);
+        user.LockoutEndDateUtc = string.IsNullOrEmpty(row["LockoutEndDateUtc"]) ? DateTime.UtcNow : DateTime.Parse(row["LockoutEndDateUtc"]);
         user.AccessFailedCount = string.IsNullOrEmpty(row["AccessFailedCount"]) ? 0 : int.Parse(row["AccessFailedCount"]);
         users.Add(user);
       }
